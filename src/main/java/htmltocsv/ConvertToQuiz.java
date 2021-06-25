@@ -30,6 +30,11 @@ public class ConvertToQuiz {
         return count;
     }
 
+    private String splitToQuestion(String htmlPart) {
+        String part = htmlPart.substring(htmlPart.indexOf("</h1>") + 5, htmlPart.indexOf("<ul>"));
+        return part;
+    }
+
     private List<String> splitHtmlString(String html, int size) {
         List<String> partHtml = new ArrayList<>();
         for (int i = 0; i < size; i++) {
@@ -44,23 +49,23 @@ public class ConvertToQuiz {
         List<Quiz> quizzes = new ArrayList<>();
         for (String s : quizzesString) {
             Document doc = Jsoup.parse(s);
-
-            Quiz quiz = getQuiz(doc);
+            String question = splitToQuestion(s);
+            Quiz quiz = getQuiz(doc, question);
             quizzes.add(quiz);
         }
         return quizzes;
     }
 
-    private Quiz getQuiz(Document doc) {
-        Quiz quiz = new Quiz();
-        Question question = getQuestion(doc);
-        quiz.setQuestion(question);
 
+    private Quiz getQuiz(Document doc, String question) {
+        Quiz quiz = new Quiz();
+        quiz.setTitle(doc.getElementsByTag("h1").text());
+        quiz.setQuestion(question);
         Elements listItem = doc.select("li");
         List<String> answers = new ArrayList<>();
         for (int i = 0; i < listItem.size(); i++) {
-            if(!listItem.get(i).getElementsByTag("input").isEmpty()) {
-                quiz.setGoodAnswerIndex(i+1);
+            if (!listItem.get(i).getElementsByTag("input").isEmpty()) {
+                quiz.setGoodAnswerIndex(i + 1);
             }
             answers.add(listItem.get(i).text());
         }
@@ -68,11 +73,5 @@ public class ConvertToQuiz {
         return quiz;
     }
 
-    private Question getQuestion( Document doc) {
-        Question question = new Question();
-        question.setMainQuestion(doc.getElementsByTag("h1").text());
-        question.setSideQuestion(doc.getElementsByTag("p").text());
-        question.setSubQuestion(doc.getElementsByTag("div").text());
-        return question;
-    }
+
 }

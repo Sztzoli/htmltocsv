@@ -9,7 +9,8 @@ import java.util.List;
 @NoArgsConstructor
 public class Quiz {
 
-    private Question question;
+    private String title;
+    private String question;
     private int goodAnswerIndex;
     private List<String> answers;
 }
