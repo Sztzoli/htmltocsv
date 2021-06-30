@@ -67,7 +67,11 @@ public class ConvertToQuiz {
             if (!listItem.get(i).getElementsByTag("input").isEmpty()) {
                 quiz.setGoodAnswerIndex(i + 1);
             }
-            answers.add(listItem.get(i).text());
+            //van input tag
+            answers.add(listItem.get(i).toString().replace("<li>","").replace("</li>",""));
+//            nincs input tag
+//            answers.add(listItem.get(i).toString().replace("<li>","").replace("</li>","")
+//                    .replaceAll("<input(.*?)>","").trim());
         }
         quiz.setAnswers(answers);
         return quiz;

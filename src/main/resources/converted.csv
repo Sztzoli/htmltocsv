@@ -1,10 +1,13 @@
 "title","Kérdés","helyes sorszáma","1","2","3","4"
 "Lorem ipsum","
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-","2","1Lorem ipsum dolor sit amet, consectetur adipiscing","1jóLorem ipsum dolor sit amet, consectetur adipiscing","1Lorem ipsum dolor sit amet, consectetur adipiscing","1Lorem ipsum dolor sit amet, consectetur adipiscing"
+","2","1Lorem 
+ <div>
+  valami div
+ </div> ipsum dolor sit amet, consectetur adipiscing","<input type=""checkbox"" disabled checked> 1jóLorem ipsum dolor sit amet, consectetur adipiscing","1Lorem ipsum dolor sit amet, consectetur adipiscing","1Lorem ipsum dolor sit amet, consectetur adipiscing"
 "Lorem ipsum dolor sit amet, consectetur","
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-","4","2Lorem ipsum dolor sit amet, consectetur adipiscing","2Lorem ipsum dolor sit amet, consectetur adipiscing","2Lorem ipsum dolor sit amet, consectetur adipiscing","2jóLorem ipsum dolor sit amet, consectetur adipiscing"
+","4","ipsum dolor sit amet, consectetur adipiscing","2Lorem ipsum dolor sit amet, consectetur adipiscing","2Lorem ipsum dolor sit amet, consectetur adipiscing","<input type=""checkbox"" disabled checked> 2jóLorem ipsum dolor sit amet, consectetur adipiscing"
 "Lorem","
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
 <div class=""sourceCode"" id=""cb1""><pre class=""sourceCode java""><code class=""sourceCode java""><span id=""cb1-1""><a href=""#cb1-1"" aria-hidden=""true""></a><span class=""kw"">private</span> <span class=""dt"">boolean</span> <span class=""fu"">oneHit</span>(<span class=""bu"">Character</span> attacker, <span class=""bu"">Character</span> defender) {</span>
@@ -14,4 +17,4 @@
 <span id=""cb1-5""><a href=""#cb1-5"" aria-hidden=""true""></a>  }</span>
 <span id=""cb1-6""><a href=""#cb1-6"" aria-hidden=""true""></a>  <span class=""kw"">return</span> attacker.<span class=""fu"">isAlive</span>() &amp;&amp; defender.<span class=""fu"">isAlive</span>();</span>
 <span id=""cb1-7""><a href=""#cb1-7"" aria-hidden=""true""></a>}</span></code></pre></div>
-","2","3Lorem ipsum dolor sit amet, consectetur adipiscing","3jóLorem ipsum dolor sit amet, consectetur adipiscing","3Lorem ipsum dolor sit amet, consectetur adipiscing","3Lorem ipsum dolor sit amet, consectetur adipiscing"
+","2","3Lorem ipsum dolor sit amet, consectetur adipiscing","<input type=""checkbox"" disabled checked> 3jóLorem ipsum dolor sit amet, consectetur adipiscing","3Lorem ipsum dolor sit amet, consectetur adipiscing","3Lorem ipsum dolor sit amet, consectetur adipiscing"
