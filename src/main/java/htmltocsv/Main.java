@@ -11,8 +11,8 @@ public class Main {
         ConvertToQuiz convert = new ConvertToQuiz();
         WriteToCsv write = new WriteToCsv();
 
-        String html = read.readHtml("src/main/resources/kerdesek.html");
+        String html = read.readHtml("src/main/resources/quiz.html");
         List<Quiz> quizzes = convert.convertTo(html);
-        write.write("src/main/resources/converted.csv",quizzes);
+        write.write("src/main/resources/converted2.csv",quizzes);
     }
 }

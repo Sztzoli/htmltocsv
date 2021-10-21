@@ -14,7 +14,7 @@ public class WriteToCsv {
         try (FileWriter outputFile = new FileWriter(file);
              CSVWriter writer = new CSVWriter(outputFile)) {
 
-            String[] header = {"title","Kérdés", "helyes sorszáma", "1", "2", "3", "4"};
+            String[] header = {"Kérdés", "helyes sorszáma", "1", "2", "3", "4","5","6","7","megjegyzés" };
             writer.writeNext(header);
 
             for (Quiz quiz : quizzes) {
@@ -29,13 +29,17 @@ public class WriteToCsv {
 
     private String[] getData(Quiz quiz) {
         return new String[]{
-                quiz.getTitle(),
+              //  quiz.getTitle(),
                 quiz.getQuestion(),
                 String.valueOf(quiz.getGoodAnswerIndex()),
                 quiz.getAnswers().get(0),
                 quiz.getAnswers().get(1),
                 quiz.getAnswers().get(2),
-                quiz.getAnswers().get(3)
+                quiz.getAnswers().get(3),
+                "",
+                "",
+                "",
+                quiz.getComment()
         };
     }
 }

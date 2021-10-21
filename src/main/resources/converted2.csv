@@ -1,0 +1,97 @@
+"Kérdés","helyes sorszáma","1","2","3","4","5","6","7","megjegyzés"
+"
+<p>Melyik a <em>helytelen</em> osztálydeklaráció?</p>
+","4","<code>public abstract class Person {}</code>","<code>abstract class Person {}</code>","<code>public class Person {}</code>","<input type=""checkbox"" disabled checked> <code>public class abstract Person {}</code>","","","","
+<p>Az <code>abstract</code> módosítószó csak a <code>class</code> előtt állhat.</p>"
+"
+<p>Melyik a <em>helytelen</em> metódusdeklaráció?</p>
+","2","<code>public abstract void getName();</code>","<input type=""checkbox"" disabled checked> <code>public void abstract getName();</code>","<code>public void getName() {}</code>","<code>abstract void getName();</code>","","","","
+<p>Az <code>abstract</code> módosítószó csak a metódus visszatérési értéke előtt állhat.</p>"
+"
+<p>Melyik a <em>helytelen</em> deklaráció?</p>
+","3","<code>public abstract class Person {public abstract void getName();}</code>","<code>public abstract class Person {public void getName() {}}</code>","<input type=""checkbox"" disabled checked> <code>public class Person {public abstract void getName();}</code>","<code>public class Person {public void getName() {}}</code>","","","","
+<p>Az absztrakt osztály attól és csak attól absztrakt, hogy kiírjuk elé az <code>abstract</code> módosítószót. Lehet benne absztrakt metódus, de ez nem kötelező. Lehet olyan is, hogy egyetlen absztrakt metódus sincs benne. A sima, nem absztrakt osztályban viszont nem lehet absztrakt metódus.</p>"
+"
+<p>Adott a következő 4 deklaráció:</p>
+<p>1.:</p>
+<div class=""sourceCode"" id=""cb1""><pre class=""sourceCode java""><code class=""sourceCode java""><span id=""cb1-1""><a href=""#cb1-1"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">abstract</span> <span class=""kw"">class</span> Adult <span class=""op"">{</span></span>
+<span id=""cb1-2""><a href=""#cb1-2"" aria-hidden=""true"" tabindex=""-1""></a>    <span class=""kw"">public</span> <span class=""kw"">abstract</span> <span class=""dt"">void</span> <span class=""fu"">getName</span><span class=""op"">();</span></span>
+<span id=""cb1-3""><a href=""#cb1-3"" aria-hidden=""true"" tabindex=""-1""></a><span class=""op"">}</span></span>
+<span id=""cb1-4""><a href=""#cb1-4"" aria-hidden=""true"" tabindex=""-1""></a></span>
+<span id=""cb1-5""><a href=""#cb1-5"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">class</span> Child <span class=""kw"">extends</span> Adult <span class=""op"">{</span></span>
+<span id=""cb1-6""><a href=""#cb1-6"" aria-hidden=""true"" tabindex=""-1""></a>    <span class=""kw"">public</span> <span class=""dt"">void</span> <span class=""fu"">getName</span><span class=""op"">()</span> <span class=""op"">{}</span></span>
+<span id=""cb1-7""><a href=""#cb1-7"" aria-hidden=""true"" tabindex=""-1""></a><span class=""op"">}</span></span></code></pre></div>
+<p>2.:</p>
+<div class=""sourceCode"" id=""cb2""><pre class=""sourceCode java""><code class=""sourceCode java""><span id=""cb2-1""><a href=""#cb2-1"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">abstract</span> <span class=""kw"">class</span> Adult <span class=""op"">{</span></span>
+<span id=""cb2-2""><a href=""#cb2-2"" aria-hidden=""true"" tabindex=""-1""></a>  <span class=""kw"">public</span> <span class=""kw"">abstract</span> <span class=""dt"">void</span> <span class=""fu"">getName</span><span class=""op"">();</span></span>
+<span id=""cb2-3""><a href=""#cb2-3"" aria-hidden=""true"" tabindex=""-1""></a><span class=""op"">}</span></span>
+<span id=""cb2-4""><a href=""#cb2-4"" aria-hidden=""true"" tabindex=""-1""></a></span>
+<span id=""cb2-5""><a href=""#cb2-5"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">class</span> Child <span class=""kw"">extends</span> Adult <span class=""op"">{}</span></span></code></pre></div>
+<p>3.:</p>
+<div class=""sourceCode"" id=""cb3""><pre class=""sourceCode java""><code class=""sourceCode java""><span id=""cb3-1""><a href=""#cb3-1"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">abstract</span> <span class=""kw"">class</span> Adult <span class=""op"">{</span></span>
+<span id=""cb3-2""><a href=""#cb3-2"" aria-hidden=""true"" tabindex=""-1""></a>  <span class=""kw"">public</span> <span class=""kw"">abstract</span> <span class=""dt"">void</span> <span class=""fu"">getName</span><span class=""op"">();</span></span>
+<span id=""cb3-3""><a href=""#cb3-3"" aria-hidden=""true"" tabindex=""-1""></a><span class=""op"">}</span></span>
+<span id=""cb3-4""><a href=""#cb3-4"" aria-hidden=""true"" tabindex=""-1""></a></span>
+<span id=""cb3-5""><a href=""#cb3-5"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">abstract</span> <span class=""kw"">class</span> Child <span class=""op"">{}</span></span></code></pre></div>
+<p>4.:</p>
+<div class=""sourceCode"" id=""cb4""><pre class=""sourceCode java""><code class=""sourceCode java""><span id=""cb4-1""><a href=""#cb4-1"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">abstract</span> <span class=""kw"">class</span> Adult <span class=""op"">{</span></span>
+<span id=""cb4-2""><a href=""#cb4-2"" aria-hidden=""true"" tabindex=""-1""></a>  <span class=""kw"">public</span> <span class=""dt"">void</span> <span class=""fu"">getName</span><span class=""op"">()</span> <span class=""op"">{}</span></span>
+<span id=""cb4-3""><a href=""#cb4-3"" aria-hidden=""true"" tabindex=""-1""></a><span class=""op"">}</span></span>
+<span id=""cb4-4""><a href=""#cb4-4"" aria-hidden=""true"" tabindex=""-1""></a></span>
+<span id=""cb4-5""><a href=""#cb4-5"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">class</span> Child <span class=""kw"">extends</span> Adult <span class=""op"">{}</span></span></code></pre></div>
+<p>Ezek közül hányadik a <em>helytelen</em>?</p>
+","2","1","<input type=""checkbox"" disabled checked> 2","3","4","","","","
+<p>Az absztrakt osztályból öröklődő osztálynak vagy meg kell valósítania (implementálnia kell) az absztrakt osztály absztrakt metódusait, vagy magának is absztrakt osztálynak kell lennie. Amely metódusok már az absztrakt osztályban konkrét működést kaptak, azokkal nincs kötelező tennivalója a leszármazott osztálynak.</p>"
+"
+<p>Melyik a helyes deklaráció?</p>
+","2","<code>public class Flower implement Colour {}</code>","<input type=""checkbox"" disabled checked> <code>public class Flower implements Colour {}</code>","<code>public class Flower implemented Colour {}</code>","<code>public class Flower implements interface Colour {}</code>","","","","
+<p>Interfész implementálásának kulcsszava: <code>implements</code>, és ezután közvetlenül az interfész(ek) neve írandó.</p>"
+"
+<p>Melyik állítás <em>hamis</em>?</p>
+","1","<input type=""checkbox"" disabled checked> Interfésznek nevezzük azon osztályokat, melyek által egy rendszerhez lehet kapcsolódni anélkül, hogy ismernénk annak belső működését.","Az interfész előírja az őt implementáló osztály számára, hogy milyen metódussal (metódusokkal) kell rendelkeznie ahhoz, hogy kompatibilis legyen más osztályokkal.","Az interfész deklarálhat konstansokat (<code>public static final</code>).","Az interfész metódusai alapértelmezetten <code>public abstract</code> módosítószókkal rendelkeznek (ha másmilyet nem írunk nekik).","","","","
+<p>Az interfész az osztályokhoz hasonló nyelvi elem, de nem osztály.</p>"
+"
+<p>Melyik a helyes deklaráció?</p>
+","4","<code>public class Flower implements Colour &amp;&amp; Bee {}</code>","<code>public class Flower implements Colour and Bee {}</code>","<code>public class Flower implemented Colour &amp; Bee {}</code>","<input type=""checkbox"" disabled checked> <code>public class Flower implements Colour, Bee {}</code>","","","","
+<p>Több interfész implementálásakor azok neveit vesszővel elválasztva kell felsorolni az <code>implements</code> kulcsszó után.</p>"
+"
+<p>Adott a következő négy interfész:</p>
+<div class=""sourceCode"" id=""cb5""><pre class=""sourceCode java""><code class=""sourceCode java""><span id=""cb5-1""><a href=""#cb5-1"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">interface</span> Cooking <span class=""op"">{</span></span>
+<span id=""cb5-2""><a href=""#cb5-2"" aria-hidden=""true"" tabindex=""-1""></a>  <span class=""dt"">void</span> <span class=""fu"">getFamilyMemberToDoWith</span><span class=""op"">(</span><span class=""bu"">String</span> name<span class=""op"">);</span></span>
+<span id=""cb5-3""><a href=""#cb5-3"" aria-hidden=""true"" tabindex=""-1""></a><span class=""op"">}</span></span>
+<span id=""cb5-4""><a href=""#cb5-4"" aria-hidden=""true"" tabindex=""-1""></a></span>
+<span id=""cb5-5""><a href=""#cb5-5"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">interface</span> Drawing <span class=""op"">{</span></span>
+<span id=""cb5-6""><a href=""#cb5-6"" aria-hidden=""true"" tabindex=""-1""></a>  <span class=""dt"">void</span> <span class=""fu"">getFamilyMemberToDoWith</span><span class=""op"">(</span><span class=""bu"">String</span> name<span class=""op"">);</span></span>
+<span id=""cb5-7""><a href=""#cb5-7"" aria-hidden=""true"" tabindex=""-1""></a><span class=""op"">}</span></span>
+<span id=""cb5-8""><a href=""#cb5-8"" aria-hidden=""true"" tabindex=""-1""></a></span>
+<span id=""cb5-9""><a href=""#cb5-9"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">interface</span> Reading <span class=""op"">{</span></span>
+<span id=""cb5-10""><a href=""#cb5-10"" aria-hidden=""true"" tabindex=""-1""></a>  <span class=""dt"">int</span> <span class=""fu"">getFamilyMemberToDoWith</span><span class=""op"">(</span><span class=""bu"">String</span> name<span class=""op"">);</span></span>
+<span id=""cb5-11""><a href=""#cb5-11"" aria-hidden=""true"" tabindex=""-1""></a><span class=""op"">}</span></span>
+<span id=""cb5-12""><a href=""#cb5-12"" aria-hidden=""true"" tabindex=""-1""></a></span>
+<span id=""cb5-13""><a href=""#cb5-13"" aria-hidden=""true"" tabindex=""-1""></a><span class=""kw"">public</span> <span class=""kw"">interface</span> Playing <span class=""op"">{</span></span>
+<span id=""cb5-14""><a href=""#cb5-14"" aria-hidden=""true"" tabindex=""-1""></a>  <span class=""dt"">void</span> <span class=""fu"">getFamilyMemberToDoWith</span><span class=""op"">(</span><span class=""bu"">String</span> name<span class=""op"">,</span> <span class=""dt"">int</span> age<span class=""op"">);</span></span>
+<span id=""cb5-15""><a href=""#cb5-15"" aria-hidden=""true"" tabindex=""-1""></a><span class=""op"">}</span></span></code></pre></div>
+<p>Melyik biztosan <em>helytelen</em> a következő deklarációk közül?</p>
+","1","<input type=""checkbox"" disabled checked> <code>public class Home implements Cooking, Reading {}</code>","<code>public class Home implements Playing, Drawing {}</code>","<code>public class Home implements Reading, Playing {}</code>","<code>public class Home implements Cooking, Drawing {}</code>","","","","
+<p>Abban az esetben, ha egy osztály két olyan interfészt implementál, mely ugyanolyan nevű metódust ír elő (névütközés):</p>"
+"
+<p>Mit jelent a <em>dependency inversion</em> kifejezés?</p>
+","3","Dependecy inversion esetében nem ismerhetjük egy rendszer belső működését, csak egy interfészen keresztül kapcsolódunk hozzá.","Dependency inversion esetében az interfész előírja az őt implementáló osztályok számára, hogy milyen metódussal, metódusokkal kell rendelkezniük ahhoz, hogy kompatibilisek legyenek más interfészekkel.","<input type=""checkbox"" disabled checked> Dependency inversion-nek nevezzük azt, amikor nem egy osztályra mutat a függőség, hanem annak egy interfészére.","Dependency inversion az, amikor az osztály több interfészt is implementál, ezért több interfésztől is függeni fog.","","","","
+<p><em>Dependency inversion</em>-nek nevezzük azt, amikor egy osztály úgy használja egy másik osztály objektumát, hogy nem az osztályára hivatkozik, hanem az általa implementált interfészre.<br />
+Ez azért hasznos, mert így egy ilyen (interfész) típusú attribútumnak többféle implementációt is értékül adhatunk és ezáltal az algoritmus is cserélhetővé válik.</p>"
+"
+<p>Melyik deklaráció <em>helytelen</em> egy interfész metódus esestében?</p>
+","1","<input type=""checkbox"" disabled checked> <code>private double getPerimeter();</code>","<code>default int getNumber(String numberString) {return Integer.parseInt(numberString);}</code>","<code>private static String getText() {return """";}</code>","<code>void makeTrue();</code>","","","","
+<p>A privát interfész metódusoknak mindig kell, hogy legyen implementációjuk az interfészen belül, hiszen az implementáló osztály nem éri el ezeket a metódusokat, hogy konkrét megvalósítást adhasson nekik.</p>"
+"
+<p>Az alábbiak közül melyik szerepelhet interfészben?</p>
+","2","<code>private default String nameOfBuilding;</code>","<input type=""checkbox"" disabled checked> <code>public static final int LENGTH_OF_THE_ROAD = 100;</code>","<code>private String name;</code>","<code>public default final int weight = 30;</code>","","","","
+<p>Az interfész deklarálhat konstansokat, amelyek kötelezően <code>public static final</code> módosítószókkal rendelkeznek. Ezeket kívülről az interfész nevét minősítőként használva érhetjük el.</p>"
+"
+<p>Az alábbiak közül melyik állítás <em>hamis</em>?</p>
+","3","Az interfész neve előtt a <code>final</code> módosítószó kiírása nem lehetséges.","Az interfészek között lehetséges a többszörös öröklődés.","<input type=""checkbox"" disabled checked> Az interfész statikus metódusa öröklődik.","Az interfésznek nem kötelező, hogy legyenek metódusai, lehet üres is.","","","","
+<p>Az interfész neve előtt a <code>final</code> módosítószó kiírása nem lehetséges, hiszen akkor nem tudnák őt implementálni az osztályok. Az interfészek között lehetséges a többszörös öröklődés, valamint egy interfész lehet üres is (<em>marker</em> interfész). Az interfész statikus metódusa viszont nem öröklődik.</p>"
+"
+<p>Az alábbiak közül melyik állítás <em>hamis</em>?</p>
+","1","<input type=""checkbox"" disabled checked> Absztrakt metódust az enum típus is tartalmazhat, és ezt a belőle leszármazó osztályoknak kell implementálniuk.","Az állapotgép egy olyan szerkezet, amely különböző bemenetek hatására egyik állapotból egy másikba lép.","Az enum nem maradhat absztrakt, ezért az esetlegesen benne található absztrakt metódust minden egyes példánynál külön meg kell valósítani.","Az állapotgép modellezésére nagyon jól használható az enum típus.","","","","
+<p>Absztrakt metódust az enum típus is tartalmazhat. Mivel maga az enum nem maradhat absztrakt, ezért minden egyes felsorolt példányánál egyenként implementálni kell az adott metódust. Ezt a példány neve utáni kapcsos zárójelek között lehet megtenni.</p>"
